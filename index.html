@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Super Evento Presencial · Ventas, Embudos, Finanzas y Ads · 15 de noviembre</title>
 <meta name="description" content="Una noche presencial con 6 ponentes para aprender ventas, embudos, Meta Ads, finanzas y TikTok Live. 15 de noviembre, 5:00 p. m. a 9:00 p. m. Cupos limitados.">
+<link rel="canonical" href="https://pablob-lab.github.io/super-evento-presencial/">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Super Evento Presencial · 15 de noviembre">
+<meta property="og:description" content="Ventas, Embudos, Finanzas y Ads con 6 ponentes. 5:00 a 9:00 p. m. Entrada S/ 50. Cupos limitados.">
+<meta property="og:image" content="https://pablob-lab.github.io/super-evento-presencial/flyer.jpg">
+<meta property="og:url" content="https://pablob-lab.github.io/super-evento-presencial/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0804">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,6 +24,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;line-height:1.1;letter-spacing:-.02em}
 a{color:inherit}
@@ -41,7 +50,7 @@ nav .btn{padding:9px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
 
 /* hero */
 .hero{padding:70px 0 90px;background:radial-gradient(900px 500px at 80% -10%,rgba(244,193,71,.22),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(184,134,27,.18),transparent 60%),var(--bg)}
-.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(244,193,71,.08);color:var(--gold2);padding:7px 14px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:22px}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(244,193,71,.7);animation:pulse 1.8s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(244,193,71,0)}100%{box-shadow:0 0 0 0 rgba(244,193,71,0)}}
@@ -51,6 +60,7 @@ nav .btn{padding:9px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
 .meta div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 18px;font-size:.95rem}
 .meta small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
 .meta strong{font-weight:600}
+.count{display:flex;gap:10px;margin:0 0 26px}.count div{min-width:64px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 6px}.count b{display:block;font-family:'Bricolage Grotesque';font-size:1.6rem;line-height:1}.count small{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .cta-note{font-size:.85rem;color:var(--muted);margin-top:14px}
 .faces{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -59,7 +69,8 @@ nav .btn{padding:9px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
 .faces img{width:100%;height:100%;object-fit:cover;display:block}
 .faces figcaption{position:absolute;inset:auto 0 0 0;padding:20px 8px 7px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.74rem;font-weight:600;text-align:center}
 .faces-title{text-align:center;color:var(--muted);font-size:.85rem;margin-top:34px}
-@media(max-width:900px){.hero .grid{grid-template-columns:1fr}}
+@media(max-width:900px){.hero .grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){nav b{font-size:.82rem}nav .btn{white-space:nowrap;padding:9px 12px;font-size:.82rem}.faces figcaption{display:none}.pending{white-space:normal}.hero .btn{width:100%;justify-content:center;padding:15px 18px;font-size:1rem}.meta div{flex:1 1 40%}}
 
 /* strip */
 .strip{background:var(--bg2);border-block:1px solid var(--line);padding:22px 0}
@@ -168,6 +179,7 @@ footer{padding:40px 0 100px;text-align:center;color:var(--muted);font-size:.85re
         <div><small>Lugar</small><strong>Presencial · <span class="pending">dirección por confirmar</span></strong></div>
         <div><small>Entrada</small><strong>S/ 50</strong></div>
       </div>
+      <div class="count" id="count" aria-label="Cuenta regresiva al evento"><div><b id="cd">–</b><small>días</small></div><div><b id="ch">–</b><small>horas</small></div><div><b id="cm">–</b><small>min</small></div></div>
       <div class="cta-row">
         <a class="btn" data-wa="mack" href="#registro">💬 Quiero mi lugar · Escribir a Mack</a>
         <a class="btn ghost" data-wa="moises" href="#registro">💬 Escribir a Moisés</a>
@@ -343,6 +355,10 @@ document.getElementById('form').addEventListener('submit',e=>{
   window.open(wa(CONTACTS.mack,msg),'_blank');
   f.style.display='none'; document.getElementById('ok').style.display='block';
 });
+const T=new Date('2026-11-15T17:00:00-05:00');
+function tick(){const d=T-Date.now();if(d<=0){document.getElementById('count').style.display='none';return}
+cd.textContent=Math.floor(d/864e5);ch.textContent=Math.floor(d%864e5/36e5);cm.textContent=Math.floor(d%36e5/6e4)}
+tick();setInterval(tick,30000);
 // Números de contacto para compra de entradas (formato internacional, solo dígitos)
 const CONTACTS={mack:'51965488664',moises:'51901134121'};
 const wa=(n,t)=>`https://wa.me/${n}?text=${encodeURIComponent(t||'Hola, quiero comprar mi entrada (S/ 50) para el Super Evento Presencial del 15 de noviembre.')}`;
