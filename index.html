@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://pablob-lab.github.io/super-evento-presencial/">
 <meta property="og:type" content="website"><meta property="og:locale" content="es_PE">
 <meta property="og:title" content="Super Evento Presencial · 15 de noviembre">
-<meta property="og:description" content="Ventas, Embudos, Finanzas y Ads con 6 ponentes. 5:00 a 9:00 p. m. Entrada S/ 50. Cupos limitados.">
+<meta property="og:description" content="Ventas, Embudos, Finanzas y Ads con 6 ponentes. 5:00 a 9:00 p. m. Entrada S/ 100. Cupos limitados.">
 <meta property="og:image" content="https://pablob-lab.github.io/super-evento-presencial/flyer.jpg">
 <meta property="og:url" content="https://pablob-lab.github.io/super-evento-presencial/">
 <meta name="twitter:card" content="summary_large_image">
@@ -177,7 +177,7 @@ footer{padding:40px 0 100px;text-align:center;color:var(--muted);font-size:.85re
         <div><small>Fecha</small><strong>15 de noviembre</strong></div>
         <div><small>Horario</small><strong>5:00 p. m. – 9:00 p. m.</strong></div>
         <div><small>Lugar</small><strong>Presencial · <span class="pending">dirección por confirmar</span></strong></div>
-        <div><small>Entrada</small><strong>S/ 50</strong></div>
+        <div><small>Entrada</small><strong>S/ 100</strong></div>
       </div>
       <div class="count" id="count" aria-label="Cuenta regresiva al evento"><div><b id="cd">–</b><small>días</small></div><div><b id="ch">–</b><small>horas</small></div><div><b id="cm">–</b><small>min</small></div></div>
       <div class="cta-row">
@@ -299,7 +299,7 @@ footer{padding:40px 0 100px;text-align:center;color:var(--muted);font-size:.85re
         <li>6 ponentes en una sola noche</li>
         <li>Estrategias reales y casos prácticos</li>
         <li>Networking con otros emprendedores</li>
-        <li>Entrada: <strong>S/ 50</strong> por persona</li>
+        <li>Entrada: <strong>S/ 100</strong> por persona</li>
       </ul>
     </div>
     <div>
@@ -332,7 +332,7 @@ footer{padding:40px 0 100px;text-align:center;color:var(--muted);font-size:.85re
     <div class="faq-wrap">
       <details><summary>¿Cuándo y a qué hora es?</summary><p>El 15 de noviembre, de 5:00 p. m. a 9:00 p. m.</p></details>
       <details><summary>¿Dónde se realiza?</summary><p>Es un evento presencial. La dirección <span class="pending">por confirmar</span>; la enviaremos a quienes se inscriban.</p></details>
-      <details><summary>¿Cuánto cuesta?</summary><p>La entrada cuesta S/ 50 por persona.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>La entrada cuesta S/ 100 por persona.</p></details>
       <details><summary>¿Para quién es?</summary><p>Para emprendedores, dueños de negocio y personas que venden o quieren vender mejor, sin importar el rubro.</p></details>
       <details><summary>¿Los cupos son limitados?</summary><p>Sí. Te recomendamos inscribirte con tiempo.</p></details>
       <details><summary>¿Habrá grabación o material?</summary><p><span class="pending">Por confirmar</span>.</p></details>
@@ -351,7 +351,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.getElementById('form').addEventListener('submit',e=>{
   e.preventDefault();
   const f=e.target; if(!f.nombre.value.trim()||!f.whatsapp.value.trim()||!f.correo.value.includes('@')){alert('Completa nombre, WhatsApp y un correo válido.');return}
-  const msg=`Hola, quiero reservar mi entrada (S/ 50) para el Super Evento Presencial del 15 de noviembre.\nNombre: ${f.nombre.value}\nWhatsApp: ${f.whatsapp.value}\nCorreo: ${f.correo.value}\nNegocio: ${f.negocio.value||'-'}\nTema de interés: ${f.tema.value}`;
+  const msg=`Hola, quiero reservar mi entrada (S/ 100) para el Super Evento Presencial del 15 de noviembre.\nNombre: ${f.nombre.value}\nWhatsApp: ${f.whatsapp.value}\nCorreo: ${f.correo.value}\nNegocio: ${f.negocio.value||'-'}\nTema de interés: ${f.tema.value}`;
   window.open(wa(CONTACTS.mack,msg),'_blank');
   f.style.display='none'; document.getElementById('ok').style.display='block';
 });
@@ -361,7 +361,7 @@ cd.textContent=Math.floor(d/864e5);ch.textContent=Math.floor(d%864e5/36e5);cm.te
 tick();setInterval(tick,30000);
 // Números de contacto para compra de entradas (formato internacional, solo dígitos)
 const CONTACTS={mack:'51965488664',moises:'51901134121'};
-const wa=(n,t)=>`https://wa.me/${n}?text=${encodeURIComponent(t||'Hola, quiero comprar mi entrada (S/ 50) para el Super Evento Presencial del 15 de noviembre.')}`;
+const wa=(n,t)=>`https://wa.me/${n}?text=${encodeURIComponent(t||'Hola, quiero comprar mi entrada (S/ 100) para el Super Evento Presencial del 15 de noviembre.')}`;
 document.getElementById('wa-mack').href=wa(CONTACTS.mack);
 document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(CONTACTS[a.dataset.wa]);a.target='_blank';a.rel='noopener'});
 if(CONTACTS.moises){const m=document.getElementById('wa-moises');m.href=wa(CONTACTS.moises);m.style.display='inline-flex'}
