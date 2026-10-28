@@ -94,10 +94,10 @@ nav .btn{padding:9px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
 /* programa */
 .prog{margin-top:36px;display:grid;gap:10px;max-width:820px}
 .slot{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 20px}
-.slot time{font-family:'Bricolage Grotesque';font-weight:700;color:var(--gold);font-size:1.05rem}
+.slot time{white-space:nowrap;font-family:'Bricolage Grotesque';font-weight:700;color:var(--gold);font-size:1.05rem}
 .slot strong{display:block}.slot small{color:var(--muted)}
 .slot.soft{background:transparent;border-style:dashed}
-@media(max-width:520px){.slot{grid-template-columns:78px 1fr;padding:12px 14px}}
+@media(max-width:520px){.slot{grid-template-columns:92px 1fr;padding:12px 14px}}
 /* modules */
 .modules{background:var(--bg2);border-block:1px solid var(--line)}
 .mods{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -120,7 +120,7 @@ nav .btn{padding:9px 18px;font-size:.9rem;border-radius:10px;box-shadow:none}
 .sp h3{font-size:1.25rem}
 .sp .topic{color:var(--gold);font-weight:600;font-size:.92rem;margin:4px 0 8px}
 .sp p{color:var(--muted);font-size:.88rem}
-@media(max-width:900px){.speakers{grid-template-columns:1fr 1fr}}@media(max-width:560px){.speakers{grid-template-columns:1fr}}
+@media(max-width:900px){.speakers{grid-template-columns:1fr 1fr}}@media(max-width:560px){.speakers{grid-template-columns:1fr}.sp img{aspect-ratio:1.25;object-position:50% 20%}}
 
 /* organizer */
 .org{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;margin-top:40px}
@@ -328,7 +328,7 @@ footer{padding:40px 0 100px;text-align:center;color:var(--muted);font-size:.85re
     <div>
       <span class="eyebrow">Inscripción</span>
       <h2>Reserva tu lugar antes de que se llenen los cupos</h2>
-      <p class="lead">Déjanos tus datos y te escribimos por WhatsApp con la confirmación y los siguientes pasos.</p>
+      <p class="lead">Completa tus datos y se abrirá WhatsApp con el mensaje listo para enviar a Mack, que te confirma tu lugar y los siguientes pasos.</p>
       <ul class="ticks">
         <li>6 ponentes en una sola noche</li>
         <li>Estrategias reales y casos prácticos</li>
